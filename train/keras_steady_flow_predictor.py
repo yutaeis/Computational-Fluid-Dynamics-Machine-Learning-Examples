@@ -133,7 +133,3 @@ for i in xrange(predicted_steady_flow.shape[0]):
   velocity_image = np.concatenate([predicted_steady_flow[i,:,:,2], test_steady_flows[i,:,:,2], test_geometries[i,:,:,0]/10.0], axis=1)
   plt.imshow(velocity_image)
   plt.show()
- 
-
-
-

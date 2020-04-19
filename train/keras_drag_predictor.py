@@ -107,8 +107,3 @@ for i in xrange(predicted_drag_vectors.shape[0]):
   print("predicted drag is: " + str(predicted_drag_vectors[i]))
   plt.imshow(test_geometries[i,:,:,0])
   plt.show()
-
- 
-
-
-

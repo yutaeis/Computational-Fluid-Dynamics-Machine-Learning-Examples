@@ -55,4 +55,3 @@ for i in tqdm(xrange(num_runs)):
 
 # start que
 simulation_queue.join()
-
