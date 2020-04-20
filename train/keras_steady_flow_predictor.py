@@ -124,7 +124,7 @@ print('Average Mean Squared Error:', score[0])
 
 # display predictions on test set
 predicted_steady_flow = model.predict(test_geometries, batch_size=batch_size)
-for i in xrange(predicted_steady_flow.shape[0]):
+for i in range(predicted_steady_flow.shape[0]):
   # plot predicted vs true flow
   velocity_image = np.concatenate([predicted_steady_flow[i,:,:,0], test_steady_flows[i,:,:,0], test_geometries[i,:,:,0]/10.0], axis=1)
   plt.imshow(velocity_image)
@@ -133,3 +133,4 @@ for i in xrange(predicted_steady_flow.shape[0]):
   velocity_image = np.concatenate([predicted_steady_flow[i,:,:,2], test_steady_flows[i,:,:,2], test_geometries[i,:,:,0]/10.0], axis=1)
   plt.imshow(velocity_image)
   plt.show()
+  

@@ -100,10 +100,11 @@ print('Average Mean Squared Error:', score[0])
 
 # display predictions on test set
 predicted_drag_vectors = model.predict(test_geometries, batch_size=batch_size)
-for i in xrange(predicted_drag_vectors.shape[0]):
+for i in range(predicted_drag_vectors.shape[0]):
   # plot predicted vs true flow
   print("geometry in plot")
   print("true drag is     : " + str(test_drag_vectors[i]))
   print("predicted drag is: " + str(predicted_drag_vectors[i]))
   plt.imshow(test_geometries[i,:,:,0])
   plt.show()
+  

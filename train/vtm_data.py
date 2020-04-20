@@ -86,7 +86,7 @@ class VTK_data:
       reader = open(drag_vector_file, "r")
       drag_values = reader.readlines()
       drag_array = np.zeros((len(drag_values)))
-      for i in xrange(len(drag_values)):
+      for i in range(len(drag_values)):
         values = drag_values[i].split(' ')
         drag_array[i] = float(values[1])
       if np.isnan(drag_array).any():
@@ -102,7 +102,7 @@ class VTK_data:
   def minibatch(self, train=True, batch_size=32, batch_type="flow"):
     batch_boundary = []
     batch_data = []
-    for i in xrange(batch_size): 
+    for i in range(batch_size): 
       if train:
         sample = np.random.randint(0, self.split_line)
       else:
@@ -119,7 +119,7 @@ batch_size = 5
 dataset = VTK_data("../data")
 dataset.load_data()
 batch_boundary, batch_data = dataset.minibatch(batch_size=batch_size, batch_type="flow")
-for i in xrange(batch_size):
+for i in range(batch_size):
   plt.imshow(batch_boundary[i][:,:,0])
   plt.show()
   plt.imshow(batch_data[i][:,:,0])
